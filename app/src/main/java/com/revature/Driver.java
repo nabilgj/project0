@@ -49,7 +49,6 @@ public class Driver {
                     System.out.println("Enter your password please");
                     String password = scan.nextLine();
 
-
                     // user information coming from postman
                     // pass user info to UserService
                     // talk to DAO and save onto DB
