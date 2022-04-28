@@ -4,9 +4,11 @@
 package com.revature;
 
 import com.revature.dao.UserDaoMock;
+import com.revature.exceptions.UsernameOrPasswordIncorrectException;
 import com.revature.models.*;
 import com.revature.services.UserService;
 import com.revature.dao.*;
+import com.revature.exceptions.UsernameOrPasswordIncorrectException;
 
 import java.util.Scanner;
 
@@ -34,7 +36,7 @@ public class Driver {
 
                 String userInput = scan.nextLine();
 
-                if (userInput.equalsIgnoreCase("1")){
+                if (userInput.equalsIgnoreCase("1")) {
                     System.out.println("Enter your first name please");
                     String first = scan.nextLine();
 
@@ -57,21 +59,29 @@ public class Driver {
                     // pass user info to UserService
                     // talk to DAO and save onto DB
                     uServ.registerUser(first, last, username, userType, email, password);
-                    User newUser = uDao.getUserByUsername("nabil baba");
 
-//                    System.out.println(newUser);
+                } else {
+                    // this is coming from UserService loginUser method
+                    System.out.println("Enter your username");
+                    String username = scan.nextLine();
 
-                    isDone = true;
+                    System.out.println("Enter your password please");
+                    String password = scan.nextLine();
+
+                    try {
+                        loggedIn = uServ.loginUser(username, password);
+                        System.out.println(loggedIn);
+                    } catch (UsernameOrPasswordIncorrectException e) {
+                        e.printStackTrace();
+                    }
                 }
             } else {
-
+                System.out.println("Hey!!! you are logged in now");
+                isDone = true;
             }
 
 
         }
-
-
-
 
     }
 }

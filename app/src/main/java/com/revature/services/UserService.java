@@ -2,6 +2,7 @@ package com.revature.services;
 
 import com.revature.dao.IUserDao;
 import com.revature.models.User;
+import com.revature.exceptions.UsernameOrPasswordIncorrectException;
 
 public class UserService {
 
@@ -27,5 +28,19 @@ public class UserService {
 
 
         uDao.createUser(register);
+    }
+
+    // used in Driver to login in
+    // way to retrieve a user with specific username and password from db
+    public User loginUser(String username, String password) throws UsernameOrPasswordIncorrectException {
+
+        User u = uDao.getUserByUsername(username);
+
+        // check if user exists
+        if (u == null || !password.equals(u.getPassword())) {
+            throw new UsernameOrPasswordIncorrectException();
+        } else {
+            return u;
+        }
     }
 }
