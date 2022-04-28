@@ -4,6 +4,10 @@ import com.revature.dao.IUserDao;
 import com.revature.models.User;
 import com.revature.exceptions.UsernameOrPasswordIncorrectException;
 
+import java.util.Collections;
+import java.util.List;
+import java.util.ArrayList;
+
 public class UserService {
 
     // banking operations will go here
@@ -42,5 +46,12 @@ public class UserService {
         } else {
             return u;
         }
+    }
+
+    public List<User> getTopUsers() {
+
+        List<User> uList = uDao.getAllUsers();
+        Collections.sort(uList);
+        return uList;
     }
 }

@@ -3,14 +3,15 @@
  */
 package com.revature;
 
-import com.revature.dao.UserDaoMock;
-import com.revature.exceptions.UsernameOrPasswordIncorrectException;
 import com.revature.models.*;
-import com.revature.services.UserService;
+import com.revature.services.*;
 import com.revature.dao.*;
+
 import com.revature.exceptions.UsernameOrPasswordIncorrectException;
 
 import java.util.Scanner;
+import java.util.List;
+import java.util.Iterator;
 
 public class Driver {
 
@@ -19,15 +20,17 @@ public class Driver {
         private static UserService uServ = new UserService(uDao);
 
 
+
+
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
         boolean isDone = false;
         User loggedIn = null;
 
-        while(!isDone) {
+        MockUserDB.getInstance().populateUsers();
 
-            System.out.println("Welcome to Revature Bank");
+        while(!isDone) {
 
             // use if else to see if user exist in the db
             if (loggedIn == null) {
@@ -71,12 +74,44 @@ public class Driver {
                     try {
                         loggedIn = uServ.loginUser(username, password);
                         System.out.println(loggedIn);
+
+
                     } catch (UsernameOrPasswordIncorrectException e) {
                         e.printStackTrace();
                     }
                 }
             } else {
                 System.out.println("Hey!!! you are logged in now");
+
+                // once they are logged in user can deposit, withdraw and transfer
+
+                System.out.println("Welcome to Revature Bank");
+                System.out.println("Chose");
+                System.out.println("1 for deposit");
+                System.out.println("2 for withdraw");
+                System.out.println("3 for transfer");
+                System.out.println("4 to check your balance");
+                int input = scan.nextInt();
+                scan.nextLine();
+                switch (input) {
+                    case 1:
+                        break;
+
+                    case 2:
+                        break;
+
+                    case 3:
+                        // showing an iterator
+                        List<User> uList = uServ.getTopUsers();
+                        Iterator<User> uIter = uList.iterator();
+                        System.out.println("username\t\t\t\tFollowers");
+
+                        while (uIter.hasNext()) {
+                            User u = uIter.next();
+                            System.out.println(u.getUsername() + "\t\t\t\t" + u.getFollowers().size());
+                        }
+                        break;
+                }
                 isDone = true;
             }
 
