@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da450097-a17b-4971-92af-ce6ab66c4dab" name="Changes" comment="initial setup">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/IUserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/MockPostDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/MockUserDB.java" afterDir="false" />
+    <list default="true" id="da450097-a17b-4971-92af-ce6ab66c4dab" name="Changes" comment="created DAO layer with Mock DB and will add postgresql later">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/IUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/IUserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/MockPostDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/MockPostDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/UserDaoMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/UserDaoMock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/services/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -85,7 +86,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651098378803</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="created DAO layer with Mock DB and will add postgresql later">
+      <created>1651101415165</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1651101415165</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -101,6 +109,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial setup" />
+    <MESSAGE value="created DAO layer with Mock DB and will add postgresql later" />
+    <option name="LAST_COMMIT_MESSAGE" value="created DAO layer with Mock DB and will add postgresql later" />
   </component>
 </project>

@@ -3,14 +3,18 @@
  */
 package com.revature;
 
+import com.revature.dao.UserDaoMock;
 import com.revature.models.*;
 import com.revature.services.UserService;
+import com.revature.dao.*;
 
 import java.util.Scanner;
 
 public class Driver {
 
-        private static UserService uServ = new UserService();
+        // we can implement postgres instead of UserDaoMock
+        private static IUserDao uDao = new UserDaoMock();
+        private static UserService uServ = new UserService(uDao);
 
 
     public static void main(String[] args) {
@@ -52,8 +56,10 @@ public class Driver {
                     // user information coming from postman
                     // pass user info to UserService
                     // talk to DAO and save onto DB
-                    User u1 = uServ.registerUser(first, last, username, userType, email, password);
-                    System.out.println(u1.toString());
+                    uServ.registerUser(first, last, username, userType, email, password);
+                    User newUser = uDao.getUserByUsername("nabil baba");
+
+//                    System.out.println(newUser);
 
                     isDone = true;
                 }

@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 import com.revature.models.Post;
 
-// this will model an Eager Singleton
+// MockPostDB is a Eager Singleton
 public class MockPostDB {
     private Map<String, Post> db;
 
@@ -19,7 +19,7 @@ public class MockPostDB {
         return mockDBInstance;
     }
 
-    public Map<String, Post> getDb() {
+    public Map<String, Post> getDB() {
         return db;
     }
 }
