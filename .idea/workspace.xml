@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da450097-a17b-4971-92af-ce6ab66c4dab" name="Changes" comment="added exception to the project for loging user">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/IUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/IUserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/MockUserDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/MockUserDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/UserDaoMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/UserDaoMock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/services/UserService.java" afterDir="false" />
-    </list>
+    <list default="true" id="da450097-a17b-4971-92af-ce6ab66c4dab" name="Changes" comment="added mock followers to Set" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,7 +100,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651150063054</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added mock followers to Set">
+      <created>1651163360835</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1651163360835</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added mock followers to Set">
+      <created>1651165461820</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1651165461820</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,6 +133,8 @@
     <MESSAGE value="created DAO layer with Mock DB and will add postgresql later" />
     <MESSAGE value="created user using dao layer inside UserServices and the method registerUser called in Driver using dao" />
     <MESSAGE value="added exception to the project for loging user" />
-    <option name="LAST_COMMIT_MESSAGE" value="added exception to the project for loging user" />
+    <MESSAGE value="added mock followers to Set" />
+    <MESSAGE value="added fancy ternary operator to finish the application" />
+    <option name="LAST_COMMIT_MESSAGE" value="added fancy ternary operator to finish the application" />
   </component>
 </project>

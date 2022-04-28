@@ -104,15 +104,23 @@ public class Driver {
                         // showing an iterator
                         List<User> uList = uServ.getTopUsers();
                         Iterator<User> uIter = uList.iterator();
-                        System.out.println("username\t\t\t\tFollowers");
+                        System.out.println("username\t\t\t\t\tFollowers");
 
                         while (uIter.hasNext()) {
                             User u = uIter.next();
-                            System.out.println(u.getUsername() + "\t\t\t\t" + u.getFollowers().size());
+                            System.out.println(u.getUsername() + "\t\t\t\t\t" + u.getFollowers().size());
                         }
+
+                        System.out.println("who would you like to follow");
+                        System.out.println("Enter their username below");
+                        String username = scan.nextLine();
+                        uServ.followUser(loggedIn, username);
                         break;
                 }
-                isDone = true;
+                System.out.println("Are you finished? Y/N");
+                String userInput = scan.nextLine();
+                // use ternary operator
+                isDone = userInput.equalsIgnoreCase("Y") ? true : false;
             }
 
 
